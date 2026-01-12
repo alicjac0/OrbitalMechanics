@@ -1,13 +1,16 @@
-OrbitalMechanics is a simple 2D physics simulation written in Java.
-The project focuses on modeling orbital motion using classical
-(Newtonian) mechanics and serves as a learning project combining
-programming and physics.
+# Orbital Mechanics Simulation
 
-## Features
-- 2D vector mathematics (Vector2D)
-- Object-oriented design
-- Foundations of orbital mechanics
-- Physics-oriented code structure
+A simple 2D orbital simulation in JavaFX that demonstrates gravitational interactions between multiple bodies.  
+This version visualizes the **3-body problem**, showing the chaotic orbits of three bodies under mutual gravitational forces.  
 
-## Status
-Work in progress 
+- Bodies are color-coded for easy tracking
+- Interactive visualization of classical orbital mechanics
+
+Built with **JavaFX** in Java 19.
+
+
+## How to Run
+
+1. Clone the repository
+2. Make sure Java 19 and JavaFX SDK 19 are installed
+3. Run the `Main` class to launch the simulation
