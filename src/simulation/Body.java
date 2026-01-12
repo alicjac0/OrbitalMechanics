@@ -35,7 +35,7 @@ public class Body {
 
         double strength = other.mass / (distance * distance);
 
-        acceleration = direction.multiply(strength);
+        acceleration = acceleration.add(direction.multiply(strength)); // for 2+ objects
 
 
 
