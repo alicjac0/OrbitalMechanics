@@ -24,4 +24,8 @@ public class Vector2D {
     public double length(){
         return Math.sqrt(x*x + y*y);
     }
+
+    public String toString() {
+        return "(" + x + ", " + y + ")";
+    }
 }
