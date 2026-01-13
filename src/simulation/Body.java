@@ -1,5 +1,5 @@
 package simulation;
-
+import javafx.scene.paint.Color;
 import physics.Vector2D;
 
 public class Body {
@@ -7,12 +7,15 @@ public class Body {
     public Vector2D position;
     public Vector2D velocity;
     public Vector2D acceleration;
+    public Color color;
 
-    public Body(double mass, Vector2D position, Vector2D velocity, Vector2D acceleration){
+
+    public Body(double mass, Vector2D position, Vector2D velocity, Vector2D acceleration, Color color){
         this.mass=mass;
         this.position=position;
         this.velocity= velocity;
         this.acceleration = new Vector2D(0,0);
+        this.color=color;
     }
 
     public void update(){
@@ -39,5 +42,9 @@ public class Body {
 
 
 
+    }
+
+    public int getDrawSize() {
+        return (int)Math.sqrt(mass);
     }
 }

@@ -28,9 +28,9 @@ public class SimulationUI extends Application {
         primaryStage.show();
 
         ArrayList<Body> bodies = new ArrayList<>();
-        bodies.add(new Body(10, new Vector2D(400,300), new Vector2D(0,2.3), new Vector2D(0,0)));
-        bodies.add(new Body(10, new Vector2D(200,300), new Vector2D(0,-2.6), new Vector2D(0,0)));
-        bodies.add(new Body(1000, new Vector2D(300,300), new Vector2D(0,0), new Vector2D(0,0)));
+        bodies.add(new Body(204, new Vector2D(451,300), new Vector2D(0,2), new Vector2D(0,0), Color.WHITE));
+        bodies.add(new Body(203, new Vector2D(150,300), new Vector2D(0,-2.001), new Vector2D(0,0), Color.BLUE));
+        bodies.add(new Body(1000, new Vector2D(300,300), new Vector2D(0,0.01), new Vector2D(0,0), Color.YELLOW));
 
         AnimationTimer timer = new AnimationTimer() {
             @Override
@@ -54,18 +54,17 @@ public class SimulationUI extends Application {
                     b.update();
                 }
 
-                for (int i = 0; i < bodies.size(); i++) {
-                    Body b = bodies.get(i);
+                for (Body b : bodies) {
+                    gc.setFill(b.color);
 
-                    switch (i) {
-                        case 0 -> gc.setFill(Color.YELLOW);
-                        case 1 -> gc.setFill(Color.YELLOW);
-                        case 2 -> gc.setFill(Color.WHITE);
-                    }
+                    int size = b.getDrawSize();
 
-                    gc.fillOval((int)b.position.x, (int)b.position.y, 15, 15);
-
-
+                    gc.fillOval(
+                            (int) b.position.x - size / 2,
+                            (int) b.position.y - size / 2,
+                            size,
+                            size
+                    );
                 }
 
             }
