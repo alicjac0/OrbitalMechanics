@@ -1,4 +1,4 @@
-package ui;
+package ui; 
 import javafx.application.Application;
 import physics.Vector2D;
 import simulation.Body;

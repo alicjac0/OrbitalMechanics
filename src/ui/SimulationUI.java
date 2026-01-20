@@ -28,15 +28,15 @@ public class SimulationUI extends Application {
         primaryStage.show();
 
         ArrayList<Body> bodies = new ArrayList<>();
-        bodies.add(new Body(204, new Vector2D(451,300), new Vector2D(0,2), new Vector2D(0,0), Color.WHITE));
-        bodies.add(new Body(203, new Vector2D(150,300), new Vector2D(0,-2.001), new Vector2D(0,0), Color.BLUE));
+        bodies.add(new Body(203, new Vector2D(451,300), new Vector2D(0,2), new Vector2D(0,0), Color.WHITE));
+        bodies.add(new Body(201, new Vector2D(150,300), new Vector2D(0,-2.001), new Vector2D(0,0), Color.BLUE));
         bodies.add(new Body(1000, new Vector2D(300,300), new Vector2D(0,0.01), new Vector2D(0,0), Color.YELLOW));
 
         AnimationTimer timer = new AnimationTimer() {
             @Override
             public void handle(long l) {
 
-                gc.setFill(Color.BLACK);
+                gc.setFill(new Color(0,0,0,0.1));
                 gc.fillRect(0,0,canvas.getWidth(), canvas.getHeight());
 
                 for(Body b : bodies){
