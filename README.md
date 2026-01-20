@@ -7,6 +7,11 @@ allowing visual distinction between massive and light bodies.
 
 This version visualizes the **3-body problem**, showing the chaotic orbits of three bodies under mutual gravitational forces.
 
+<img width="802" height="632" alt="image" src="https://github.com/user-attachments/assets/a722ca18-0bd8-4f95-ae1d-6f92416c015d" />
+<img width="802" height="632" alt="image" src="https://github.com/user-attachments/assets/a8bec0d9-86cc-4a30-b616-a9d1fad5bb7f" />
+
+
+
 **Built with JavaFX in Java 19.**
 
 ## Features
